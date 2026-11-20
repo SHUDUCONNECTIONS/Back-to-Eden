@@ -1,9 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": null,
-  "installCommand": "cd frontend && npm ci",
-  "buildCommand": "cd frontend && npm run build",
-  "outputDirectory": "frontend/dist",
+  "framework": "vite",
   "rewrites": [
     { "source": "/api/:path*", "destination": "https://typical-relatives-own-canvas.trycloudflare.com/api/:path*" },
     { "source": "/uploads/:path*", "destination": "https://typical-relatives-own-canvas.trycloudflare.com/uploads/:path*" },
