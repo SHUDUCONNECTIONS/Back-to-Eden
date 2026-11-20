@@ -1,0 +1,14 @@
+# Files never uploaded by "railway up". Mirrors .dockerignore.
+**/node_modules
+**/dist
+**/*.tsbuildinfo
+**/.env
+**/.env.*
+!**/.env.example
+backend/data
+_legacy-root
+mobile
+scripts
+.git
+node_modules
+*.log

@@ -1,0 +1,34 @@
+# Runs the production image locally - the same image Railway runs.
+#
+#   docker compose up --build -d    -> http://localhost:8081
+#   docker compose down             stop (data volume is kept)
+#   docker compose down -v          stop and wipe the database + photos
+#
+# On Windows, if "up --build" fails with "additional privileges requested",
+# build first and then start without building:
+#   docker build -t backtoeden .
+#   docker compose up -d --no-build
+#
+# Port 3001 is published too, so the Vite dev server (npm run dev in
+# frontend/, which proxies /api to localhost:3001) can use this backend.
+#
+# Secrets (ADMIN_EMAILS, GEMINI_API_KEY) are read from backend/.env at run
+# time; they are never copied into the image.
+
+services:
+  app:
+    build:
+      context: .
+    image: backtoeden
+    env_file:
+      - path: backend/.env
+        required: false
+    volumes:
+      - eden-data:/app/data
+    ports:
+      - "8081:3001"
+      - "3001:3001"
+    restart: unless-stopped
+
+volumes:
+  eden-data:

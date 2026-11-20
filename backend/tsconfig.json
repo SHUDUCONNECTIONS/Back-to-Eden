@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    /*
+     * module/moduleResolution are "node16", not "commonjs"/"node".
+     *
+     * The classic pair still compiles, but both halves are deprecated and stop
+     * working in TypeScript 7, so the editor flags them as errors even while
+     * the build succeeds. "node16" is the supported way to say "resolve the way
+     * Node does", and because this package has no "type": "module" in its
+     * package.json, it still emits CommonJS - which NestJS needs.
+     */
+    "module": "node16",
+    "moduleResolution": "node16",
+    "target": "ES2022",
+    "lib": ["ES2022"],
+
+    /* Nest's dependency injection reads design:paramtypes at runtime, so this
+     * pair is not optional - without it every constructor injection fails. */
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+
+    /* Stated explicitly: without it the compiler cannot tell whether dist/
+     * should mirror src/ or the package root, and warns about the ambiguity. */
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    "declaration": false,
+    "removeComments": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "noFallthroughCasesInSwitch": false,
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

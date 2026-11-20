@@ -1,0 +1,14 @@
+# Build context for the root Dockerfile. Keep secrets and local data out.
+**/node_modules
+**/dist
+**/*.tsbuildinfo
+**/.env
+**/.env.*
+!**/.env.example
+backend/data
+_legacy-root
+mobile
+scripts
+.git
+node_modules
+*.log

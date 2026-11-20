@@ -1,0 +1,26 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+
+# Local config. Each package reads backend/.env.
+.env*
+!.env.example
+
+# SQLite databases and uploaded photos (local data, not source)
+backend/data/
+
+# Expo
+mobile/.expo/
+mobile/dist/
+
+# The pre-restructure root files, kept until the new layout is trusted.
+_legacy-root/
+
+# Vercel preview builds (scripts/deploy-vercel.mjs)
+.vercel-deploy/
+
+# Generated HTML for the PDFs (docs/source/build.mjs)
+docs/source/html/

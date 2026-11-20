@@ -1,0 +1,6 @@
+{
+  "name": "Back To Eden - Preventive Health, Nutrition & Wellness",
+  "description": "Filter healthy, affordable foods within your budget, discover nutritious recipes with cost tracking, and navigate the grocery store with live cross-device shopping list sync.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

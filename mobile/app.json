@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "Back To Eden",
+    "slug": "nourishbudget",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#f7eedd"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nourishbudget.backtoeden"
+    },
+    "android": {
+      "package": "com.nourishbudget.backtoeden",
+      "adaptiveIcon": {
+        "backgroundColor": "#4e6b3e"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "extra": {
+      "//": "Set EXPO_PUBLIC_API_URL to the backend. On a real device this must be your machine's LAN IP, not localhost - see src/lib/config.ts."
+    },
+    "plugins": [
+      "expo-asset",
+      "expo-font",
+      "expo-secure-store"
+    ]
+  }
+}
